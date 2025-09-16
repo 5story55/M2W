@@ -2229,7 +2229,7 @@ function toSendAMes(guestName,interName,creatorName){
     return true;
 }
 function addDateConference(person){
-    var newDate="11/14/2025 09:30";
+    var newDate="11/14/2025";
     console.log(newDate);
      const obj = {
         text: newDate,
@@ -2250,6 +2250,30 @@ function addDateConference(person){
         })
         .then((json) => {
             console.log(obj);
+            console.log(json);
+        });
+    
+    var newHour="09:30";
+    console.log(newHour);
+     const obj2 = {
+        text: newHour,
+        row: person.row,
+        col: 'hour'
+    };
+    console.log(obj2);
+    let formData2 = new FormData();
+    formData.append("data", JSON.stringify(obj2));
+    console.log(obj2);
+    fetch(url, {
+            method: "POST",
+            body: formData2,
+        })
+        .then((rep) => {
+            console.log(obj2);
+            return rep.json();
+        })
+        .then((json) => {
+            console.log(obj2);
             console.log(json);
         });
     return changeTimeZone(new Date(newDate), 'Asia/Jerusalem');
