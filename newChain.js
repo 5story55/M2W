@@ -329,8 +329,8 @@ var firstPerson={};
       }
     }
   }
-   if(firstPerson!={}){
-       return firstPerson;
+   if(firstPerson==[{}]){
+       return { guestname: "...", chain: currChain.name, row: -1 };
    }
   if (peopleInChain.length > 0) {
     peopleInChain.sort(function (a, b) {
