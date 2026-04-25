@@ -29,11 +29,11 @@ function getCrewData() {
     
 }
 function submit(){
-        
     currCrew=crewChosen();
     console.log("tries: "+currCrew.name)
-    if(currCrew.password===document.getElementById("password").value)
-            window.open("home.html","_self")
+    if(currCrew.password===document.getElementById("password").value){
+        window.location.href='./home.html?mode='+document.getElementById("mode").value;   
+    }
     else
         alert("סיסמא שגויה!");
 }
