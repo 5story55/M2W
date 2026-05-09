@@ -74,6 +74,7 @@ img {
     
   .nav-img {
     visibility: visible;
+      max-height: 30px;
     object-fit: contain;
   }
     #wideLogo{
