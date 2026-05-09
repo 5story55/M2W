@@ -62,7 +62,7 @@ img {
     object-fit: contain;
   }
     #wideLogo{
-        max-height: 20px;
+        max-height: 22px;
          object-fit: contain;
     }
     .nav-lang{
@@ -70,7 +70,23 @@ img {
     }
 
 }
+@media (max-width: 400px) {
+    
+  .nav-img {
+    visibility: visible;
+    object-fit: contain;
+  }
+    #wideLogo{
+        max-height: 11px;
+         object-fit: contain;
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar-brand{
+        transform: translateX(20px);
+    }
 
+}
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
